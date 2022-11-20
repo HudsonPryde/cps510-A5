@@ -7,6 +7,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.ResultSet;
 
 /**
  * JavaFX App
@@ -32,6 +36,23 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        try {
+            Class.forName("oracle.jdbc.OracleDriver");
+            System.out.println("driver loaded.");
+            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@oracle12c.scs.ryerson.ca:1521/orcl12c",
+                    "hpstuart", "11060173");
+            System.out.println("con successfull with:" + " " + con);
+            java.sql.Statement statement = con.createStatement();
+            ResultSet result = statement.executeQuery("Select * from customers");
+            // Print results from select statement
+            while (result.next()) {
+                System.out.println(result.getString(2) + " " + result.getString(3));
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         launch();
     }
 
