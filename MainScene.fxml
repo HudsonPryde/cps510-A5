@@ -5,30 +5,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="922.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="cps510javaui.JavaUIController">
+<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="922.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cps510javaui.JavaUIController">
    <children>
       <Label layoutX="154.0" layoutY="105.0" text="Store Records System">
          <font>
             <Font size="64.0" />
          </font>
       </Label>
-      <Button layoutX="180.0" layoutY="255.0" mnemonicParsing="false" text="Customer">
+      <Button layoutX="180.0" layoutY="255.0" mnemonicParsing="false" onAction="#switchToScene2" text="Customer">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="341.0" layoutY="255.0" mnemonicParsing="false" text="Supplier">
+      <Button layoutX="341.0" layoutY="255.0" mnemonicParsing="false" onAction="#switchToSupplier" text="Supplier">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="494.0" layoutY="255.0" mnemonicParsing="false" text="Order">
+      <Button layoutX="494.0" layoutY="255.0" mnemonicParsing="false" onAction="#switchToOrder" text="Order">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="627.0" layoutY="255.0" mnemonicParsing="false" text="Item">
+      <Button layoutX="627.0" layoutY="255.0" mnemonicParsing="false" onAction="#switchToItem" text="Item">
          <font>
             <Font size="24.0" />
          </font>
