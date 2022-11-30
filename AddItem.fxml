@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="559.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cps510javaui.AddItemController">
+   <children>
+      <TextField layoutX="234.0" layoutY="275.0" promptText="Item Name" />
+      <TextField layoutX="400.0" layoutY="276.0" promptText="Quantity" />
+      <TextField layoutX="566.0" layoutY="276.0" promptText="\$0.00" />
+      <Label layoutX="234.0" layoutY="257.0" text="Item Name:" />
+      <Label layoutX="400.0" layoutY="257.0" text="Quantity:" />
+      <Label layoutX="566.0" layoutY="257.0" text="Price:" />
+      <Label layoutX="376.0" layoutY="135.0" text="Add Item">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Button layoutX="445.0" layoutY="327.0" mnemonicParsing="false" text="Add">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="167.0" layoutY="109.0" mnemonicParsing="false" onAction="#switchToMainScene" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
